@@ -41,7 +41,7 @@ print(f"Congratulations! You guessed the number in {guesses} guesses.")
 
 # Task 2
 
-# initialize the first two numbers in the series
+""" # initialize the first two numbers in the series
 a, b = 1, 1
 
 # print out the first two numbers
@@ -49,12 +49,23 @@ print(a)
 print(b)
 
 # use a loop to generate and print the remaining numbers in the series
-for i in range(2, 50):
+for i in range(50):
     # calculate the next number in the series as the sum of the previous two
     c = a + b
-    
+
     # print out the next number in the series
     print(c)
-    
+
     # update the previous two numbers to prepare for the next iteration
-    a, b = b, c
+    a, b = b, c """
+
+# Another way to do it
+prev = 1
+prevprev = 0
+current = 1
+for i in range(0):  # using "i" is a convention, could stand for interation, index, integer
+
+    prevprev = prev
+    prev = current
+    current = prev + prevprev
+print(prev)
